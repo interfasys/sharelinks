@@ -1,6 +1,6 @@
 # Share Links
 
-An app which adds additional buttons to the share dialogue, letting you quickly pick the type of link you need.
+An app which adds additional buttons to the ownCloud share dialogue, letting you quickly pick the type of link you need.
 
 ## Featuring
 
@@ -104,6 +104,7 @@ $ git pull --rebase origin master
 ## How to use
 
 If you share a file, you'll notice a switch letting you choose between the standard link and one which allows you to download the file directly, to post it to a forum per example.
-IF you share a folder, you'll notice a switch letting you choose between the standard link and one which lands directly into the Gallery app.
+
+If you share a folder, you'll notice a switch letting you choose between the standard link and one which lands directly into the Gallery app.
 
 		
