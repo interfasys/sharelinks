@@ -27,7 +27,14 @@ Util::addTranslations('sharelinks');
 
 // Hack which only loads the scripts in the Files app, if Gallery is enabled
 $request = $c->query('Request');
-if (\OCP\App::isEnabled('galleryplus') && isset($request->server['REQUEST_URI'])) {
+$galleryVersion = explode(".", \OCP\App::getAppVersion('galleryplus'));
+
+// Assuming versions are always in the x.y.z format
+$galleryRelease = (int)$galleryVersion[2];
+if ((\OCP\App::isEnabled('galleryplus')
+	 && $galleryRelease >= 12)
+	&& isset($request->server['REQUEST_URI'])
+) {
 	$url = $request->server['REQUEST_URI'];
 	if (preg_match('%index.php/apps/files(/.*)?%', $url)
 	) {
