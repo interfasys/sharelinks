@@ -1,6 +1,6 @@
 # Share Links
 
-An app which adds additional buttons to the ownCloud share dialogue, letting you quickly pick the type of link you need.
+An app which adds additional buttons to the ownCloud share dialogue if you're using the Gallery app, letting you quickly pick the type of link you need.
 
 ## Featuring
 
