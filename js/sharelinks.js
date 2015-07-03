@@ -11,11 +11,12 @@ ShareLinks.hijackShare = function () {
 		var dropDownElement = $('#dropdown.drop.shareDropDown');
 		var linkSwitchButtonElement = $('#linkSwitchButton');
 		var urlElement = $('#linkText');
+		var linkCheckboxElement = $('#linkCheckbox');
 
 		// TODO: Use a switch button
 		if (!linkSwitchButtonElement.length) {
 			linkSwitchButtonElement = $('<a/>').addClass('button').attr('id', 'linkSwitchButton');
-			$('#linkCheckbox+label').after(linkSwitchButtonElement);
+			linkCheckboxElement.find('+label').after(linkSwitchButtonElement);
 		}
 
 		if (dropDownElement.data('item-type') === "folder") {
@@ -24,7 +25,7 @@ ShareLinks.hijackShare = function () {
 			ShareLinks.showFileLinksButton(dropDownElement, urlElement, linkSwitchButtonElement);
 		}
 
-		$('#linkCheckbox').change(function () {
+		linkCheckboxElement.change(function () {
 			if (this.checked) {
 				linkSwitchButtonElement.show();
 			} else {
@@ -101,7 +102,7 @@ $(document).ready(function () {
 		}
 
 		if ($('#filesApp').val()) {
-			$('#fileList').on('updated', ShareLinks.hijackShare);
+			$('#fileList').one('updated', ShareLinks.hijackShare);
 		}
 	}
 );
