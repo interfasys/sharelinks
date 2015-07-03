@@ -1,2 +1,5 @@
-owncloud-sharelinks (1.0.0)
+owncloud-sharelinks (2)
+
+
+owncloud-sharelinks (1)
 * First release
