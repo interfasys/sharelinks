@@ -9,6 +9,7 @@
 	<version>1</version>
 	<namespace>ShareLinks</namespace>
 	<category>Tool</category>
+	<ocsid>170527</ocsid>
 	<dependencies>
 		<owncloud min-version="8.0"/>
 	</dependencies>
